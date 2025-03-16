@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Geography quiz
+        </title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\adars\OneDrive\Documents\Programming\website2\images\earth icon.png">
+    </head>
+    <body style="background-color: rgba(98, 214, 96, 0.55); border-style:solid; border-color: black; border-width: 2px; border-radius: 5px;">
+        <h1 style="font-family:'Courier New', Courier, monospace, Times, serif; font-size:250%;">Language</h1><br>
+        <form id="quiz" style="font-size: larger;">
+      
+            <p>1. What is the official language of Canada?</p>
+            <input type="radio" name="question1" value="Canadian">Canadian<br>
+            <input type="radio" name="question1" value="Portuguese">Portuguese<br>
+            <input type="radio" name="question1" value="French">French<br>
+            <input type="radio" name="question1" value="Spanish">Spanish<br>
+      
+            <p>2. Which language is recognized as the official language of Switzerland?</p>
+            <input type="radio" name="question2" value="Spanish">Spanish<br>
+            <input type="radio" name="question2" value="Swiss">Swiss<br>
+            <input type="radio" name="question2" value="Italian">Italian<br>
+            <input type="radio" name="question2" value="Portuguese">Portuguese<br>
+      
+            <p>3. What is the most spoken language in Brazil?</p>
+            <input type="radio" name="question3" value="Portuguese">Portuguese<br>
+            <input type="radio" name="question3" value="Spanish">Spanish<br>
+            <input type="radio" name="question3" value="French">French<br>
+            <input type="radio" name="question3" value="Italian">Italian<br>
+
+            <p>4. What is the official language of Nigeria?</p>
+            <input type="radio" name="question4" value="Spanish">Spanish<br>
+            <input type="radio" name="question4" value="English">English<br>
+            <input type="radio" name="question4" value="Portuguese">Portuguese<br>
+            <input type="radio" name="question4" value="French">French<br>
+
+            <p>5.  What is the most spoken language in Mexico?</p>
+            <input type="radio" name="question5" value="English">English<br>
+            <input type="radio" name="question5" value="Spanish">Spanish<br>
+            <input type="radio" name="question5" value="French">French<br>
+            <input type="radio" name="question5" value="Portuguese">Portuguese<br>
+            <br>
+
+        <input type="button" value="Submit" style="height: 40px; width: 180px; font-size: larger;" onclick="checkAnswers()">
+        </form>
+    <script>
+      function checkAnswers() {
+        var correct = 0;
+        var incorrect = 0;
+
+        if (document.querySelector('input[name="question1"][value="French"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question2"][value="Italian"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question3"][value="Portuguese"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question4"][value="English"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question5"][value="Spanish"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+
+        alert("You got " + correct + " questions correct and " + incorrect + " questions incorrect.");
+      }
+    </script>
+      
+    </body>
+</html>

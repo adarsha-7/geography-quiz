@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Geography quiz
+        </title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\adars\OneDrive\Documents\Programming\website2\images\earth icon.png">
+    </head>
+    <body style="background-color: rgba(21, 74, 237, 0.35); border-style:solid; border-color: black; border-width: 2px; border-radius: 5px;">
+        <h1 style="font-family:'Courier New', Courier, monospace, Times, serif; font-size:250%;">Flag</h1><br>
+        <form id="quiz" style="font-size: larger;">
+            <text>Identify the countries with the following flags:</text><br>
+      
+            <p>1. <img src="./images/singapore.jpeg" width="250px" height="125px"></p>
+            <input type="radio" name="question1" value="South Korea">South Korea<br>
+            <input type="radio" name="question1" value="Singapore">Singapore<br>
+            <input type="radio" name="question1" value="China">China<br>
+            <input type="radio" name="question1" value="Hong Kong">Hong Kong<br>
+      
+            <p>2. <img src="./images/russia.jpeg" width="250px" height="125px"></p>
+            <input type="radio" name="question2" value="Russia">Russia<br>
+            <input type="radio" name="question2" value="Ukraine">Ukraine<br>
+            <input type="radio" name="question2" value="Estonia">Estonia<br>
+            <input type="radio" name="question2" value="Serbia">Serbia<br>
+      
+            <p>3. <img src="./images/nigeria.jpeg" width="250px" height="125px"></p>
+            <input type="radio" name="question3" value="Nigeria">Nigeria<br>
+            <input type="radio" name="question3" value="UAE">UAE<br>
+            <input type="radio" name="question3" value="Algeria">Algeria<br>
+            <input type="radio" name="question3" value="Libya">Libya<br>
+
+            <p>4. <img src="./images/ukraine.jpeg" width="250px" height="125px"></p>
+            <input type="radio" name="question4" value="Estonia">Estonia<br>
+            <input type="radio" name="question4" value="Serbia">Serbia<br>
+            <input type="radio" name="question4" value="Russia">Russia<br>
+            <input type="radio" name="question4" value="Ukraine">Ukraine<br>
+
+            <p>5. <img src="./images/argentina.jpeg" width="250px" height="125px"></p>
+            <input type="radio" name="question5" value="Colombia">Colombia<br>
+            <input type="radio" name="question5" value="Brazil">Brazil<br>
+            <input type="radio" name="question5" value="Argentina">Argentina<br>
+            <input type="radio" name="question5" value="Uruguay">Uruguay<br>
+            <br>
+
+        <input type="button" value="Submit" style="height: 40px; width: 180px; font-size: larger;" onclick="checkAnswers()">
+        </form>
+    <script>
+      function checkAnswers() {
+        var correct = 0;
+        var incorrect = 0;
+
+        if (document.querySelector('input[name="question1"][value="Singapore"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question2"][value="Russia"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question3"][value="Nigeria"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question4"][value="Ukraine"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question5"][value="Argentina"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+
+        alert("You got " + correct + " questions correct and " + incorrect + " questions incorrect.");
+      }
+    </script>
+      
+    </body>
+</html>

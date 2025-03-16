@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Geography quiz
+        </title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\adars\OneDrive\Documents\Programming\website2\images\earth icon.png">
+    </head>
+    <body style="background-color: rgba(214, 96, 96, 0.52); border-style:solid; border-color: black; border-width: 2px; border-radius: 5px;">
+        <h1 style="font-family:'Courier New', Courier, monospace, Times, serif; font-size:250%;">Capital city</h1><br>
+        <form id="quiz" style="font-size: larger;">
+      
+            <p>1. What is the capital city of New Zealand?</p>
+            <input type="radio" name="question1" value="Wellington">Wellington<br>
+            <input type="radio" name="question1" value="Auckland">Auckland<br>
+            <input type="radio" name="question1" value="New England">New England<br>
+            <input type="radio" name="question1" value="Canberra">Canberra<br>
+      
+            <p>2. What is the capital city of Iran?</p>
+            <input type="radio" name="question2" value="Damascus">Damascus<br>
+            <input type="radio" name="question2" value="Ankara">Ankara<br>
+            <input type="radio" name="question2" value="Rabat">Rabat<br>
+            <input type="radio" name="question2" value="Tehran">Tehran<br>
+      
+            <p>3. What is the capital city of Argentina?</p>
+            <input type="radio" name="question3" value="Montevideo">Montevideo<br>
+            <input type="radio" name="question3" value="Rosario">Rosario<br>
+            <input type="radio" name="question3" value="Bruno Aires">Bruno Aires<br>
+            <input type="radio" name="question3" value="Bogota">Bogota<br>
+
+            <p>4. What is the capital city of Myanmar?</p>
+            <input type="radio" name="question4" value="Dhaka">Dhaka<br>
+            <input type="radio" name="question4" value="Thimpu">Thimpu<br>
+            <input type="radio" name="question4" value="Naypyidaw">Naypyidaw<br>
+            <input type="radio" name="question4" value="Hanoi">Hanoi<br>
+
+            <p>5. What is the capital city of Ukraine?</p>
+            <input type="radio" name="question5" value="Kyiv">Kyiv<br>
+            <input type="radio" name="question5" value="St. Petersburg">St. Petersburg<br>
+            <input type="radio" name="question5" value="Mariupol">Mariupol<br>
+            <input type="radio" name="question5" value="Kharkiv">Kharkiv<br>
+            <br>
+
+        <input type="button" value="Submit" style="height: 40px; width: 180px; font-size: larger;" onclick="checkAnswers()">
+        </form>
+    <script>
+      function checkAnswers() {
+        var correct = 0;
+        var incorrect = 0;
+
+        if (document.querySelector('input[name="question1"][value="Wellington"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question2"][value="Tehran"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question3"][value="Bruno Aires"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question4"][value="Naypyidaw"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question5"][value="Kyiv"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+
+        alert("You got " + correct + " questions correct and " + incorrect + " questions incorrect.");
+      }
+    </script>
+      
+    </body>
+</html>

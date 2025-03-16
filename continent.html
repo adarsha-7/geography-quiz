@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Geography quiz
+        </title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\adars\OneDrive\Documents\Programming\website2\images\earth icon.png">
+    </head>
+    <body style="background-color: rgba(243, 245, 39, 0.22); border-style:solid; border-color: black; border-width: 2px; border-radius: 5px;">
+        <h1 style="font-family:'Courier New', Courier, monospace, Times, serif; font-size:250%;">Continent</h1><br>
+        <form id="quiz" style="font-size: larger;">
+      
+            <p>1. What continent is home to the Great Barrier Reef?</p>
+            <input type="radio" name="question1" value="North America">North America<br>
+            <input type="radio" name="question1" value="Asia">Asia<br>
+            <input type="radio" name="question1" value="Europe">Europe<br>
+            <input type="radio" name="question1" value="Australia">Australia<br>
+      
+            <p>2. Which continent is the birthplace of civilization?</p>
+            <input type="radio" name="question2" value="North America">North America<br>
+            <input type="radio" name="question2" value="Asia">Asia<br>
+            <input type="radio" name="question2" value="Europe">Europe<br>
+            <input type="radio" name="question2" value="Africa">Africa<br>
+      
+            <p>3. What is the second smallest continent?</p>
+            <input type="radio" name="question3" value="North America">North America<br>
+            <input type="radio" name="question3" value="Europe">Europe<br>
+            <input type="radio" name="question3" value="Australia">Australia<br>
+            <input type="radio" name="question3" value="Antarctica">Antarctica<br>
+
+            <p>4. What continent is the birthplace of democracy?</p>
+            <input type="radio" name="question4" value="North America">North America<br>
+            <input type="radio" name="question4" value="Asia">Asia<br>
+            <input type="radio" name="question4" value="Europe">Europe<br>
+            <input type="radio" name="question4" value="Australia">Australia<br>
+
+            <p>5. What is the only continent located entirely in the Southern Hemisphere?</p>
+            <input type="radio" name="question5" value="Asia">Asia<br>
+            <input type="radio" name="question5" value="Europe">Europe<br>
+            <input type="radio" name="question5" value="Australia">Australia<br>
+            <input type="radio" name="question5" value="South America">South America<br>
+            <br>
+
+        <input type="button" value="Submit" style="height: 40px; width: 180px; font-size: larger;" onclick="checkAnswers()">
+        </form>
+    <script>
+      function checkAnswers() {
+        var correct = 0;
+        var incorrect = 0;
+
+        if (document.querySelector('input[name="question1"][value="Australia"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question2"][value="Africa"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question3"][value="Europe"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question4"][value="Europe"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+        if (document.querySelector('input[name="question5"][value="Australia"]').checked) {
+          correct++;
+        } else {
+          incorrect++;
+        }
+
+        alert("You got " + correct + " questions correct and " + incorrect + " questions incorrect.");
+      }
+    </script>
+      
+    </body>
+</html>
